@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!-- Column Definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- Sidebar -->
+        <StackPanel Background="#2d2d30" Grid.Column="0">
+            <TextBlock Text="MySpace Cleaner" Foreground="White" FontSize="20" FontWeight="Bold" Margin="10"/>
+            <Button Content="Home" Margin="10" Padding="10"/>
+            <Button Content="Clean" Margin="10" Padding="10"/>
+            <Button Content="Settings" Margin="10" Padding="10"/>
+        </StackPanel>
+
+        <!-- Main Panel -->
+        <StackPanel Grid.Column="1" Margin="20">
+            <!-- Disk Usage Pie Chart Placeholder -->
+            <Border Background="#ffffff" CornerRadius="10" Padding="20" Margin="0,0,0,20">
+                <TextBlock Text="Disk Usage (Pie Chart Placeholder)" FontSize="16" FontWeight="SemiBold"/>
+            </Border>
+
+            <!-- Cleanup Options -->
+            <GroupBox Header="Cleanup Categories" FontSize="14" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <CheckBox Content="Temporary Files" Margin="5"/>
+                    <CheckBox Content="Recycle Bin" Margin="5"/>
+                    <CheckBox Content="Log Files" Margin="5"/>
+                    <CheckBox Content="Game Cache (Steam/Epic)" Margin="5"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Status, Progress, and Buttons -->
+            <TextBlock Name="StatusText" Text="Status: Waiting to scan..." Margin="0,0,0,10"/>
+            <ProgressBar Height="20" Margin="0,0,0,10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Scan" Width="100" Margin="5" Padding="10" Background="#0078D7" Foreground="White"/>
+                <Button Content="Clean Now" Width="100" Margin="5" Padding="10" Background="#28a745" Foreground="White"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
+
