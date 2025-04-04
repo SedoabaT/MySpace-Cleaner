@@ -42,8 +42,8 @@
             <TextBlock Name="StatusText" Text="Status: Waiting to scan..." Margin="0,0,0,10"/>
             <ProgressBar Height="20" Margin="0,0,0,10"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Scan" Width="100" Margin="5" Padding="10" Background="#0078D7" Foreground="White"/>
-                <Button Content="Clean Now" Width="100" Margin="5" Padding="10" Background="#28a745" Foreground="White"/>
+                <Button Content="Scan" Width="100" Margin="5" Padding="10" Background="#0078D7" Foreground="White" Click="Button_Click"/>
+                <Button x:Name="cleanBtn" Content="Clean Now" Width="100" Margin="5" Padding="10" Background="#28a745" Foreground="White" Click="cleanBtn_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>
